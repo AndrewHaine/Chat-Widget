@@ -1,0 +1,93 @@
+body
+    position: relative
+    width: 100vw
+    height: 100vh    
+.phone-canvas
+    position: relative
+    margin: 0 auto
+    width: 25vw
+    height: 44.5vw
+    min-width: 500px
+    min-height: 889px
+.chat-ui-canvas
+    position: relative
+    margin: 0 auto
+    width: 21vw
+    height: 37vw
+    min-width: 340px
+    min-height: 604px
+    background-image: url("/image-store/background.png")
+    background-size: cover
+.header
+    border-bottom: white 3px solid
+    position: relative
+    top: 0px
+.header.header-unscrolled
+    height: 39%
+    .top-icons
+        height: 23%
+        width: 100%
+        position: relative
+        top: 3%
+        padding: 0px
+        .back-arrow
+            position: relative
+            display: inline-block
+            height: 100%
+            width: 20%
+            padding: 0px
+            cursor: pointer
+            .back-arrow-line
+                transition: all 0.1s ease-in-out
+                position: absolute
+                width: 5%
+                background-color: #ffffff
+                padding: 0px
+            .back-arrow-line-1
+                transform: rotate(50deg)
+                left: 32%
+                top: 21.8%
+                height: 30%
+            .back-arrow-line-2
+                transform: rotate(-50deg)
+                left: 32%
+                height: 30%
+                top: 37.5%
+            .back-arrow-line-3
+                left: 48%
+                top: 20%
+                transform: rotate(90deg)
+                height: 50%
+            &:hover
+                .back-arrow-line-1
+                    left: 25%
+                .back-arrow-line-2
+                    left: 25%
+                .back-arrow-line-3
+                    left: 40%
+        .phone-icon
+            height: 100%
+            width: 20%
+            position: relative
+            left: 60%
+            display: inline-block
+            cursor: pointer
+            img
+                position: absolute
+                margin: 0 auto
+                top: 20%
+                left: 25%
+                transition: all 0.2s ease-in-out
+            &:hover
+                img
+                    transform: scale(1.1)
+    .user-header-image
+        width: 31%
+        top: -5%
+        height: 45%
+        position: relative
+        margin: 0 auto
+        border: 4px white solid
+        border-radius: 100%
+        overflow: hidden
+        box-shadow: 1px 1px 5px #3c3c3c
