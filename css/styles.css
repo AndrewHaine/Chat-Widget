@@ -4,6 +4,7 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .phone-canvas {
@@ -140,7 +141,23 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: white;
-  font-size: 2.3em;
+  font-size: 2.5em;
+}
+
+.message-feed::-webkit-scrollbar {
+  background-color: transparent;
+  width: 2%;
+}
+
+.message-feed::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 80px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.message-feed:hover::-webkit-scrollbar-thumb {
+  background-color: #868686;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .message-feed {
@@ -148,20 +165,28 @@ body {
   width: 100%;
   top: 0px;
   height: 51%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.message-feed .message * {
+  margin: 0 auto;
 }
 
 .message-feed .message {
-  width: 100%;
-  outline: 1px white solid;
-  padding: 1%;
+  margin-left: 2%;
   position: relative;
+  width: 90%;
+  border-bottom: 1px white solid;
+  padding: 1%;
   padding-left: 5%;
   padding-right: 5%;
+  display: block;
 }
 
 .message-feed .message .message-name {
   position: relative;
-  width: 80%;
+  width: 95%;
   padding: 0px;
   top: 0px;
   display: block;
@@ -179,7 +204,7 @@ body {
 
 .message-feed .message .message-body {
   position: relative;
-  width: 70%;
+  width: 80%;
   top: 0px;
   display: block;
 }
@@ -188,13 +213,13 @@ body {
   font-family: 'Lato', sans-serif;
   color: white;
   font-weight: 300;
-  font-size: 0.7em;
+  font-size: 0.8em;
   margin: 1%;
 }
 
 .message-feed .message .message-timestamp {
   position: relative;
-  width: 80%;
+  width: 95%;
   top: 0px;
   display: block;
 }
@@ -211,6 +236,11 @@ body {
 
 .message-feed .message.message-to * {
   text-align: right;
+  margin-right: 0px;
+}
+
+.message-feed .message.message-from * {
+  margin-left: 0px;
 }
 
 .message-input-bar {
