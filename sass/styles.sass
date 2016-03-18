@@ -1,6 +1,7 @@
 @charset "utf-8"
 @import url(https://fonts.googleapis.com/css?family=Lato:200,300,400,100,700)
 /*Font in PSD is Open Sans, I had to use Lato in order to get the desired font-weight for the header.
+/* any elements with a commented out background color can be un-commented to see the guides
 
 body
     position: relative
@@ -23,6 +24,7 @@ body
     min-height: 604px
     background-image: url("/image-store/background.png")
     background-size: cover
+    overflow: hidden
 .header
     outline: white 3px solid
     position: relative
@@ -224,8 +226,7 @@ body
             .media-expand-arrow-line-2
                 top: 10%
             .media-expand-arrow-line-3
-                top: 15%
-        
+                top: 15%   
     .message-text-input
         display: inline-block
         //background-color: red
@@ -252,3 +253,100 @@ body
                 overflowY: scroll
                 resize: none
                 border-radius: 0px !important
+                
+.media-bar
+    position: relative
+    background-color: #e8e8e8
+    width: 100%
+    top: 0px
+    height: 25%
+    transition: all 0.4s ease-in-out
+    .media-bar-header
+        width: 100%
+        height: 30%
+        position: relative
+        background-color: #363636
+        .media-bar-title
+            position: relative
+            width: 40%
+            //background-color: red
+            height: 100%
+            padding-left: 3%
+            h1
+                font-family: 'Lato', sans-serif
+                color: white
+                font-size: 2em
+                line-height: 1.3em
+                font-weight: 300
+                padding-left: 6%
+        .media-close
+            //background-color: green
+            position: relative
+            height: 100%
+            width: 17%
+            top: -100%
+            left: 83%
+            cursor: pointer
+            .media-close-line
+                position: absolute
+                background-color: #ffffff
+                width: 6%
+                height: 75%
+                top: 10%
+                transition: all 0.2s ease-in-out
+            .media-close-line-1
+                transform: rotate(45deg)
+                left: 50%
+            .media-close-line-2
+                transform: rotate(-45deg)
+                left: 50%
+            &:hover
+                .media-close-line
+                    height: 90%
+                    top: 0
+                    transition: all 0.2s ease-in-out
+    .media-bar-body
+        position: relative
+        width: 100%
+        height: 70%
+        top: 0%
+        //background-color: blue
+        .media-buttons-canvas
+            height: 80%
+            top: 10%
+            width: 95%
+            margin: 0 auto
+            position: relative
+            //background-color: brown
+            padding: 0px
+            .media-button
+                width: 25%
+                position: relative
+                height: 100%
+                display: block
+                padding: 0px
+                float: left
+                cursor: pointer
+                img
+                    width: 90%
+                    left: 5%
+                    top: 5%
+                    position: relative
+                    filter: grayscale(100%)
+                    -webkit-filter: grayscale(100%)
+                    transition: all 0.3s ease-in-out
+                    &:hover
+                        filter: grayscale(0%)
+                        -webkit-filter: grayscale(0%)
+                        transition: all 0.3s ease-in-out
+            .media-button.media-audio
+                img
+                    filter: brightness(150%)
+                    -webkit-filter: grayscale(100%) brightness(150%)
+                    &:hover
+                        filter: brightness(150%)
+                        -webkit-filter: grayscale(0%)   
+.media-bar.media-bar-open
+    top: -28.5% !important
+    transition: top 0.5s ease-in-out
+
