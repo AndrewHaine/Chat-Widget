@@ -63,6 +63,55 @@ window.onload = function () {
         
         var messageVal = messageInput.value;
         
+        //hipsum responses
+        
+        function appendResponse() {
+            var randNumber = Math.floor((Math.random()*10)+1)
+            
+            switch(randNumber){
+                case 1:
+                    $('#message-feed').append(
+                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                    );
+                    break;
+                case 2:
+                    $('#message-feed').append(
+                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                    );
+                    break;
+                case 3:
+                    $('#message-feed').append(
+                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                    );
+                    break;
+                case 4:
+                    $('#message-feed').append(
+                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                    );
+                    break;
+                case 5:
+                    $('#message-feed').append(
+                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                    );
+                    break;
+                case 6:
+                    $('#message-feed').append(
+                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                    );
+                    break;
+                case 7:
+                    $('#message-feed').append(
+                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                    );
+                    break;
+                case 8:
+                    $('#message-feed').append(
+                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                    );
+                    break;
+            }
+        }
+        
         //fire on enter
         
         if (event.keyCode == 13) {
@@ -70,8 +119,10 @@ window.onload = function () {
             document.getElementById("output").innerHTML = messageVal;
             messageInput.value= "";
             appendMessage();
+            appendResponse();
             messageFeed.scrollTop = messageFeed.scrollHeight;
-        }
+        }        
+        
     };
         
     document.addEventListener("keypress", logMessage, false);
