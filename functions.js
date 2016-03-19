@@ -44,10 +44,16 @@ window.onload = function () {
     function logMessage(event){
         
         //get time
+        function addZero(i){
+            if(i < 10){
+                i = "0" + i    
+            }
+            return i;
+        }
     
         var d = new Date();    
-        var h = d.getHours();
-        var m = d.getMinutes(); 
+        var h = addZero(d.getHours());
+        var m = addZero(d.getMinutes()); 
         
         //build message
         
@@ -115,7 +121,7 @@ window.onload = function () {
                         break;
                 }
                 messageFeed.scrollTop = messageFeed.scrollHeight;
-            }, 2000);
+            }, 2500);
         };
         
         
@@ -124,7 +130,6 @@ window.onload = function () {
         
         if (event.keyCode == 13) {
             event.preventDefault();
-            document.getElementById("output").innerHTML = messageVal;
             messageInput.value= "";
             appendMessage();
             messageFeed.scrollTop = messageFeed.scrollHeight;
