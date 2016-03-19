@@ -65,62 +65,70 @@ window.onload = function () {
         
         //hipsum responses
         
-        function appendResponse() {
-            var randNumber = Math.floor((Math.random()*10)+1)
-            
-            switch(randNumber){
-                case 1:
-                    $('#message-feed').append(
-                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
-                    );
-                    break;
-                case 2:
-                    $('#message-feed').append(
-                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
-                    );
-                    break;
-                case 3:
-                    $('#message-feed').append(
-                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
-                    );
-                    break;
-                case 4:
-                    $('#message-feed').append(
-                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
-                    );
-                    break;
-                case 5:
-                    $('#message-feed').append(
-                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
-                    );
-                    break;
-                case 6:
-                    $('#message-feed').append(
-                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
-                    );
-                    break;
-                case 7:
-                    $('#message-feed').append(
-                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
-                    );
-                    break;
-                case 8:
-                    $('#message-feed').append(
-                        '<div class="message message-From"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>' + messageVal + '</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
-                    );
-                    break;
-            }
-        }
+        var responseTimed;
+        
+        function timedResponse(){
+            setTimeout(
+            function appendResponse() {
+                var randNumber = Math.floor((Math.random()*10)+1)
+
+                switch(randNumber){
+                    case 1:
+                        $('#message-feed').append(
+                            '<div class="message message-from"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>Gluten-free VHS gentrify, humblebrag blue bottle retro vegan yuccie swag etsy.</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                        );
+                        break;
+                    case 2:
+                        $('#message-feed').append(
+                            '<div class="message message-from"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>Tilde ethical offal plaid everyday carry meggings banjo gentrify, green juice food truck fap. Beard lumbersexual photo booth.</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                        );
+                        break;
+                    case 3:
+                        $('#message-feed').append(
+                            '<div class="message message-from"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>Cliche sriracha jean shorts, cronut beard irony meh asymmetrical man braid offal.</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                        );
+                        break;
+                    case 4:
+                        $('#message-feed').append(
+                            '<div class="message message-from"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>Quinoa man braid tumblr venmo lomo cray microdosing, pinterest celiac affogato fingerstache umami fashion axe schlitz. Ethical four loko truffaut salvia.</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                        );
+                        break;
+                    case 5:
+                        $('#message-feed').append(
+                            '<div class="message message-from"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>Street art bicycle rights letterpress mixtape cold-pressed. Drinking vinegar flexitarian quinoa twee.</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                        );
+                        break;
+                    case 6:
+                        $('#message-feed').append(
+                            '<div class="message message-from"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p> Artisan heirloom iPhone normcore, salvia farm-to-table vice freegan hammock waistcoat.</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                        );
+                        break;
+                    case 7:
+                        $('#message-feed').append(
+                            '<div class="message message-from"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p>Pinterest kale chips single-origin coffee, man braid franzen ethical chia plaid locavore small batch hashtag swag. Dreamcatcher kogi fingerstache, lo-fi roof party pork belly.</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                        );
+                        break;
+                    case 8:
+                        $('#message-feed').append(
+                            '<div class="message message-from"><div class="message-name"><h1>Arthur</h1></div><div class="message-body"><p> Vegan celiac heirloom knausgaard. Paleo mixtape ramps irony lomo.</p></div><div class="message-timestamp"><p>Today ' + h + ' : ' + m + '</p></div>'   
+                        );
+                        break;
+                }
+                messageFeed.scrollTop = messageFeed.scrollHeight;
+            }, 2000);
+        };
+        
         
         //fire on enter
+        
         
         if (event.keyCode == 13) {
             event.preventDefault();
             document.getElementById("output").innerHTML = messageVal;
             messageInput.value= "";
             appendMessage();
-            appendResponse();
             messageFeed.scrollTop = messageFeed.scrollHeight;
+            timedResponse();
         }        
         
     };
